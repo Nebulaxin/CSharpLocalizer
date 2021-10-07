@@ -1,0 +1,21 @@
+﻿<Window x:Class="CSharpLocalizator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSharpLocalizator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="640" Width="960" Background="#FF161616" MinWidth="864" MinHeight="500" SizeChanged="WindowSizeChanged">
+    <Grid>
+        <Label Content="C# Localizator" HorizontalAlignment="Left" Margin="14,21,0,0" VerticalAlignment="Top" Foreground="#FFEEEEEE" FontSize="48" Grid.Column="1" Height="74" Width="309"/>
+        <Label x:Name="newProjButton" Content="New Project" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Right" Margin="0,146,30,0" VerticalAlignment="Top" Width="355" Background="#FF323232" Foreground="#FFEEEEEE" Height="110" FontSize="44" FontStretch="UltraCondensed" MouseLeftButtonDown="NewProject"/>
+        <Label x:Name="openProjButton" Content="Open Project" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Right" Margin="0,274,30,0" VerticalAlignment="Top" Width="355" Background="#FF323232" Foreground="#FFEEEEEE" Height="110" FontSize="44" MouseLeftButtonDown="OpenProject" />
+        <ScrollViewer x:Name="scrollView" Background="#FF202020" Margin="14,146,442,48" MaxWidth="1280" VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="recentProjectss">
+                
+            </StackPanel>
+        </ScrollViewer>
+        <Label Content="Recent Projects" HorizontalAlignment="Left" Margin="14,83,0,0" VerticalAlignment="Top" Foreground="#FFEEEEEE" FontSize="36" Grid.Column="1" Height="58" Width="253"/>
+
+    </Grid>
+</Window>
