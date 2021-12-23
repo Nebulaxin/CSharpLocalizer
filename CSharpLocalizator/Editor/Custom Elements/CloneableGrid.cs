@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace CSharpLocalizator.Editor.CustomElements
+namespace CSharpLocalizer.Editor.CustomElements
 {
 	public class CloneableGrid : Grid
 	{

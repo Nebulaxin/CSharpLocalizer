@@ -1,9 +1,9 @@
-﻿<Window x:Class="CSharpLocalizator.StartWindow"
+﻿<Window x:Class="CSharpLocalizer.StartWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CSharpLocalizator"
+        xmlns:local="clr-namespace:CSharpLocalizer"
         mc:Ignorable="d"
         Title="C# Localizator - Main" Height="640" Width="960" Background="#FF161616" MinWidth="864" MinHeight="500">
     <Grid>

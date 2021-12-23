@@ -1,4 +1,4 @@
-﻿using CSharpLocalizator.Editor.CustomElements;
+﻿using CSharpLocalizer.Editor.CustomElements;
 
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Windows.Input;
 using System;
 using System.Globalization;
 
-namespace CSharpLocalizator.Editor
+namespace CSharpLocalizer.Editor
 {
 	/// <summary>
 	/// Логика взаимодействия для EditorWindow.xaml

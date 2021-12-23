@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 using Newtonsoft.Json;
 
-namespace CSharpLocalizator.Editor
+namespace CSharpLocalizer.Editor
 {
 	public static class Editor
 	{

@@ -3,7 +3,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 
-namespace CSharpLocalizator
+namespace CSharpLocalizer
 {
 	public class ProjectElement : Canvas
 	{

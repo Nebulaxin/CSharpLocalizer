@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CSharpLocalizator.Editor.CustomElements
+namespace CSharpLocalizer.Editor.CustomElements
 {
 	public class LanguageDropdown : Grid
 	{

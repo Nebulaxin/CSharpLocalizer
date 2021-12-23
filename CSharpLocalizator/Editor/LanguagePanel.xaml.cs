@@ -13,9 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using CSharpLocalizator.Editor.CustomElements;
+using CSharpLocalizer.Editor.CustomElements;
 
-namespace CSharpLocalizator.Editor
+namespace CSharpLocalizer.Editor
 {
 	/// <summary>
 	/// Логика взаимодействия для LanguagePanel.xaml

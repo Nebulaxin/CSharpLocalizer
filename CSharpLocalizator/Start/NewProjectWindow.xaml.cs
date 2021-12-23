@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 using Ookii.Dialogs.Wpf;
 
-namespace CSharpLocalizator
+namespace CSharpLocalizer
 {
 	/// <summary>
 	/// Логика взаимодействия для NewProjectWindow.xaml

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpLocalizator.Editor
+namespace CSharpLocalizer.Editor
 {
 	public static class Generator
 	{
@@ -17,9 +17,9 @@ namespace CSharpLocalizator.Editor
 @"using System.Globalization;
 using System.Collections.Generic;
 
-namespace CSharpLocalizator
+namespace CSharpLocalizer
 {
-	public static class Localizator
+	public static class Localizer
 	{
 		private static CultureInfo language;
 

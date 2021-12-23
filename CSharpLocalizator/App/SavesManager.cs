@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 using Newtonsoft.Json;
 
-namespace CSharpLocalizator
+namespace CSharpLocalizer
 {
 	public class SavesManager
 	{

@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.Collections.Generic;
 
-namespace CSharpLocalizator
+namespace CSharpLocalizer
 {
 	public static class Localizator
 	{

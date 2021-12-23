@@ -6,7 +6,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace CSharpLocalizator
+namespace CSharpLocalizer
 {
 	/// <summary>
 	/// Логика взаимодействия для MainWindow.xaml
