@@ -1,12 +1,73 @@
-﻿<Window x:Class="CSharpLocalizator.EditorWindow"
+﻿<Window x:Class="CSharpLocalizator.Editor.EditorWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CSharpLocalizator"
+        xmlns:local="clr-namespace:CSharpLocalizator.Editor"
+        xmlns:customs="clr-namespace:CSharpLocalizator.Editor.CustomElements"
         mc:Ignorable="d"
-        Title="EditorWindow" Height="450" Width="800" Background="#FF161616">
-    <Grid>
+        Title="" Height="450" Width="800" Background="#ff161616" WindowState="Maximized" MinWidth="864" MinHeight="500" SnapsToDevicePixels="True" WindowStyle="SingleBorderWindow">
+    <Window.Resources>
+        <SolidColorBrush x:Key="ComboBox.Static.Background" Color="#ff323232"/>
+        <SolidColorBrush x:Key="ComboBox.MouseOver.Background" Color="#ff404040"/>
+        <SolidColorBrush x:Key="ComboBox.Static.Border" Color="#FFACACAC"/>
+    </Window.Resources>
+    <Grid x:Name="main">
+        <Grid x:Name="mainPanel" Visibility="Visible">
+            <Label Content="Editor" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" Foreground="#FFEEEEEE" FontSize="48"/>
+            <Label Content="Languages" HorizontalAlignment="Left" Margin="28,86,0,0" VerticalAlignment="Top" Foreground="#FFDDDDDD" FontSize="36"/>
+            <Label Content="Add language" HorizontalAlignment="Right" Foreground="#FFDDDDDD" Background="#FF323232" FontSize="22" Margin="0,94,37,0" MouseLeftButtonDown="AddLanguage" VerticalAlignment="Top"/>
+            <ScrollViewer Background="#FF202020" VerticalScrollBarVisibility="Auto" Margin="40,144,37,10">
+                <Grid x:Name="languagesGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40" MinWidth="40" MaxWidth="80"/>
+                        <ColumnDefinition Width="160" MinWidth="120" MaxWidth="240"/>
+                        <ColumnDefinition Width="160" MinWidth="140" MaxWidth="320"/>
+                        <ColumnDefinition MinWidth="200"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition MinHeight="40" MaxHeight="40"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <GridSplitter Grid.Column="0" Grid.RowSpan="10000" Width="4" Background="#323232" BorderBrush="#ff242424" BorderThickness="1,0"/>
+                    <GridSplitter Grid.Column="1" Grid.RowSpan="10000" Width="4" Background="#323232" BorderBrush="#ff242424" BorderThickness="1,0"/>
+                    <GridSplitter Grid.Column="2" Grid.RowSpan="10000" Width="4" Background="#323232" BorderBrush="#ff242424" BorderThickness="1,0"/>
+                    <GridSplitter Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Grid.ColumnSpan="4" Height="4" Background="#323232" BorderBrush="#ff242424" BorderThickness="1,0" IsEnabled="False"/>
+
+                    <Label Content="#" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFCCCCCC" FontSize="18" SnapsToDevicePixels="True"/>
+                    <Label Content="Name" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFCCCCCC" FontSize="18" SnapsToDevicePixels="True"/>
+                    <Label Content="Language" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFCCCCCC" FontSize="18" SnapsToDevicePixels="True"/>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+
+        <!--<Grid x:Name="keys" Visibility="Hidden">
+            <Label Content="Keys" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" Foreground="#FFEEEEEE" FontSize="48" SnapsToDevicePixels="True"/>
+            <Label Content="Add Key" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="#FFDDDDDD" Background="#FF323232" FontSize="22" SnapsToDevicePixels="True" Margin="0,86,39,0" MouseLeftButtonDown="AddNewKey"/>
+            <ScrollViewer Background="#FF202020" VerticalScrollBarVisibility="Auto" Margin="40,144,40,10">
+                <Grid x:Name="keysGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40" MinWidth="40" MaxWidth="80"/>
+                        <ColumnDefinition MinWidth="200"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition MinHeight="40" MaxHeight="40"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <GridSplitter Grid.Column="0" Grid.RowSpan="10000" Width="4" Background="#323232" BorderBrush="#ff242424" BorderThickness="1,0"/>
+                    <GridSplitter Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Grid.ColumnSpan="3" Height="4" Background="#323232" BorderBrush="#ff242424" BorderThickness="1,0"/>
+
+                    <Label Content="#" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFCCCCCC" FontSize="18" SnapsToDevicePixels="True"/>
+                    <Label Content="Keys" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFCCCCCC" FontSize="18" SnapsToDevicePixels="True"/>
+                </Grid>
+            </ScrollViewer>
+
+        </Grid>-->
+
         
     </Grid>
 </Window>

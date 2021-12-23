@@ -12,7 +12,7 @@ namespace CSharpLocalizator
 	public class SavesManager
 	{
 		public static Save save = new Save();
-
+		private readonly static string savePath = Environment.ExpandEnvironmentVariables("%localappdata%") + "/CSharpLocalizator/recentprojects";
 		public static void Init()
 		{
 			if(File.Exists(Environment.ExpandEnvironmentVariables("%localappdata%") + "/CSharpLocalizator/recentprojects"))
@@ -21,29 +21,22 @@ namespace CSharpLocalizator
 
 		public static void SaveProject(SavedProject proj)
 		{
-			save.recentProjects[save.recentProjects.FindIndex(x => x == proj)] = proj;
-			Save();
-		}
-
-		public static void SaveNewProject(SavedProject proj)
-		{
+			save.recentProjects.Remove(save.recentProjects.Find(x => x.path == proj.path));
 			save.recentProjects.Add(proj);
 			Save();
 		}
 
 		private static void Save()
 		{
-			if (!Directory.Exists(Environment.ExpandEnvironmentVariables("%localappdata%") + "/CSharpLocalizator/"))
-				Directory.CreateDirectory(Environment.ExpandEnvironmentVariables("%localappdata%") + "/CSharpLocalizator/");
-			using (var sw = new StreamWriter(File.Create(Environment.ExpandEnvironmentVariables("%localappdata%") + "/CSharpLocalizator/recentprojects")))
-			{
+			//if (!Directory.Exists(Environment.ExpandEnvironmentVariables("%localappdata%") + "/CSharpLocalizator/"))
+			//	Directory.CreateDirectory(Environment.ExpandEnvironmentVariables("%localappdata%") + "/CSharpLocalizator/");
+			using (var sw = new StreamWriter(File.Create(savePath)))
 				sw.Write(JsonConvert.SerializeObject(save));
-			}
 		}
 
 		public static List<SavedProject> GetProjects()
 		{
-			return save.recentProjects;
+			return new List<SavedProject>(save.recentProjects.OrderBy(x => x.date).Reverse());
 		}
 	}
 

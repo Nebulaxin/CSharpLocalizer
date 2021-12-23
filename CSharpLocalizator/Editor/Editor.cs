@@ -1,33 +1,47 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
+using Newtonsoft.Json;
+
 namespace CSharpLocalizator.Editor
 {
-	public class Editor
+	public static class Editor
 	{
-		public static string ProjectExtension { get => ".cslp"; }
-		public static string LanguageExtension { get => ".cslang"; }
+		public static string ProjectExtension => ".cslp";
 		public static string ProjectPath { get; set; }
 
-		public static Project Project { get; set; }
-		public static List<Language> Languages { get; set; } = new List<Language>();
+		public static Project Project { get; private set; }
 
+		public static string CurrentLanguage { get; set; }
 
+		public static void Load()
+		{
+			Project = JsonConvert.DeserializeObject<Project>(File.ReadAllText(ProjectPath));
+			SavesManager.SaveProject(new SavedProject() { date = DateTime.UtcNow.Ticks, name = Project.name, path = ProjectPath });
+		}
+
+		public static void Save()
+		{
+			File.WriteAllText(ProjectPath, JsonConvert.SerializeObject(Project));
+			using (var fs = new StreamWriter(new FileStream(new FileInfo(ProjectPath).DirectoryName + "\\Localizator.cs", FileMode.Create)))
+				fs.Write(Generator.Generate(Project));
+		}
 	}
 
 	public class Project
 	{
 		public string name;
-		public List<string> languages = new List<string>();
+		public List<Language> languages = new List<Language>();
 	}
-
 	public class Language
 	{
-		public string language;
+		public string name;
 		public List<string> keys = new List<string>();
 		public List<string> values = new List<string>();
 	}
+
 }

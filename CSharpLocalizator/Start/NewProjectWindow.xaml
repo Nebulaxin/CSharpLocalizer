@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSharpLocalizator"
         mc:Ignorable="d"
-        Title="NewProjectWindow" Height="200" Width="400"  Background="#FF161616" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+        Title="NewProjectWindow" Height="200" Width="400" WindowStyle="ToolWindow" Background="#FF161616" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
     <Grid>
         <Label Content="Path" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Foreground="#FFEEEEEE"/>
         <TextBox x:Name="projPath" HorizontalAlignment="Left" Height="23" Margin="53,23,0,0" TextWrapping="Wrap" Text="C:\Users" VerticalAlignment="Top" Width="236"/>
         <Label Content=". . ." HorizontalAlignment="Left" Margin="306,23,0,0" VerticalAlignment="Top" Foreground="#FFEEEEEE" Background="#FF323232" MouseLeftButtonDown="SelectFolder"/>
         <Label Content="Name" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" Foreground="#FFEEEEEE" Width="43"/>
         <TextBox x:Name="projName" HorizontalAlignment="Left" Height="23" Margin="53,69,0,0" TextWrapping="Wrap" Text="ProjectName" VerticalAlignment="Top" Width="236"/>
-        <Label Content="Chancel" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="224,135,0,0" VerticalAlignment="Top" Foreground="#FFEEEEEE" Background="#FF323232" Width="65" MouseLeftButtonDown="Chancel"/>
-        <Label Content="OK" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="306,135,0,0" VerticalAlignment="Top" Foreground="#FFEEEEEE" Background="#FF323232" Width="65" MouseLeftButtonDown="OpenEditor"/>
+        <Label Content="Chancel" HorizontalAlignment="Right" Margin="0,0,107,10" VerticalAlignment="Bottom" Foreground="#FFEEEEEE" Background="#FF323232" MouseLeftButtonDown="Chancel"/>
+        <Label Content="OK" HorizontalAlignment="Right" Margin="0,0,41,10" VerticalAlignment="Bottom" Foreground="#FFEEEEEE" Background="#FF323232" MouseLeftButtonDown="OpenEditor" Width="52" HorizontalContentAlignment="Center"/>
 
     </Grid>
 </Window>
