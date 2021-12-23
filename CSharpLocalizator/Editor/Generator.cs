@@ -30,7 +30,7 @@ namespace CSharpLocalizer
 			for(int i = 0; i < proj.languages.Count; i++)
 			{
 				var lang = proj.languages[i];
-				output += $"			{{\n				\"CultureInfo.GetCultureInfo({lang.name})\", new Dictionary<string, string>\n";
+				output += $"			{{\n				CultureInfo.GetCultureInfo(\"{lang.name}\"), new Dictionary<string, string>\n";
 				output += $"				{{\n";
 				for (int j = 0; j < lang.keys.Count; j++)
 				{

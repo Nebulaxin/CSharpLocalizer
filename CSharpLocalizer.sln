@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31229.75
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpLocalizator", "CSharpLocalizator\CSharpLocalizator.csproj", "{48BBE796-ED61-4725-94BF-C2B8BF2D2724}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpLocalizer", "CSharpLocalizator\CSharpLocalizer.csproj", "{48BBE796-ED61-4725-94BF-C2B8BF2D2724}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
