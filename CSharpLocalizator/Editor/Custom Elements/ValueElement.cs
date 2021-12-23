@@ -15,7 +15,6 @@ namespace CSharpLocalizer.Editor.CustomElements
 	{
 		public string Key { get => key.Text; set => key.Text = value; }
 		public string Value { get => value.Text.Replace("\n", "\\n"); set => this.value.Text = value; }
-		public string Language { get; set; }
 		public int LanguagePosition { get; set; }
 		public int PairPos { get; set; }
 

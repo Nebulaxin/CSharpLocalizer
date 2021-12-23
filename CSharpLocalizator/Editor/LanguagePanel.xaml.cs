@@ -48,14 +48,13 @@ namespace CSharpLocalizer.Editor
 		private void AddKey(object sender, MouseButtonEventArgs e)
 		{
 			new ValueElement(languageGrid) 
-			{ LanguagePosition = LanguagePosition, Language = Language, PairPos = Editor.Project.languages[LanguagePosition].keys.Count };
+			{ LanguagePosition = LanguagePosition, PairPos = Editor.Project.languages[LanguagePosition].keys.Count };
 			Editor.Project.languages[LanguagePosition].keys.Add("");
 			Editor.Project.languages[LanguagePosition].values.Add("");
 		}
 		public void AddKey(string key, string value, int pos)
 		{
-			new ValueElement(languageGrid)
-			{ LanguagePosition = LanguagePosition, Language = Language, Key = key, Value = value, PairPos = pos };
+			new ValueElement(languageGrid) { LanguagePosition = LanguagePosition, PairPos = pos, Key = key, Value = value };
 		}
 	}
 }
