@@ -27,7 +27,7 @@ namespace CSharpLocalizer.Editor
 		public static void Save()
 		{
 			File.WriteAllText(ProjectPath, JsonConvert.SerializeObject(Project));
-			using (var fs = new StreamWriter(new FileStream(new FileInfo(ProjectPath).DirectoryName + "\\Localizator.cs", FileMode.Create)))
+			using (var fs = new StreamWriter(new FileStream(new FileInfo(ProjectPath).DirectoryName + "\\Localizer.cs", FileMode.Create)))
 				fs.Write(Generator.Generate(Project));
 		}
 	}

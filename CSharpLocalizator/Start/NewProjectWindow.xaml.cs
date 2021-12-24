@@ -36,7 +36,7 @@ namespace CSharpLocalizer
 			{
 				return;
 			}
-			Editor.Editor.ProjectPath = projPath.Text + projName.Text + Editor.Editor.ProjectExtension;
+			Editor.Editor.ProjectPath = projPath.Text + "/" + projName.Text + Editor.Editor.ProjectExtension;
 			Application.Current.MainWindow = new Editor.EditorWindow();
 			Application.Current.MainWindow.Show();
 			Application.Current.Windows[0].Close();

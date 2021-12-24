@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{48BBE796-ED61-4725-94BF-C2B8BF2D2724}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CSharpLocalizator</RootNamespace>
-    <AssemblyName>CSharpLocalizator</AssemblyName>
+    <RootNamespace>CSharpLocalizer</RootNamespace>
+    <AssemblyName>CSharpLocalizer</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -65,13 +65,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Editor\Custom Elements\CloneableGrid.cs" />
     <Compile Include="Editor\Custom Elements\LanguageDropdown.cs" />
     <Compile Include="Editor\Custom Elements\LanguageElement.cs" />
-    <Compile Include="Editor\Custom Elements\KeyElement.cs" />
     <Compile Include="Editor\Custom Elements\ValueElement.cs" />
     <Compile Include="Editor\Custom Elements\ListElement.cs" />
-    <Compile Include="Editor\GeneratedCode.cs" />
     <Compile Include="Editor\Generator.cs" />
     <Compile Include="Editor\LanguagePanel.xaml.cs">
       <DependentUpon>LanguagePanel.xaml</DependentUpon>
@@ -106,10 +103,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Themes\Generic.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Start\NewProjectWindow.xaml.cs">
@@ -132,15 +125,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="app.config" />
+    <None Include="App\app.config" />
     <None Include="App\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App\App.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
